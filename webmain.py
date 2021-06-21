@@ -30,7 +30,7 @@ class Posts(db.Model):
 
 
 
-@app.route('/bloghp')
+@app.route('/')
 def home():
     #posts=Posts.query.filter_by().all()[0:5]
     return render_template('index.html')
