@@ -1,0 +1,44 @@
+
+
+{% extends "layout.html" %}
+{% block body %}
+
+
+ <!-- Page Header -->
+ {% set fname = 'img/home-bg.jpg' %}
+ <header class="masthead" style="background-image: url('{{ url_for('static', filename= fname) }}')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1>Articulate it all</h1>
+          <span class="subheading"><h2>TrUsT mE. iT wOrKs!!</h2></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+
+
+{% for post in posts %}
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <h1>{{post.title}}</h1>
+        <h2>{{post.tagline}}</h2>
+        <p>{{post.content[:120]}}....</p>
+
+
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+
+  {% endblock %}

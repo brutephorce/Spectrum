@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block body %}
+
+  <!-- Page Header -->
+  {% set fname = 'img/post-bg.jpg' %}
+  <header class="masthead" style="background-image: url('{{ url_for('static', filename= fname) }}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>All Postings</h1>
+            <h2 class="subheading">Here you go</h2>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <h1>{{post.title}}</h1>
+        <h2>{{post.tagline}}</h2>
+        <p>{{post.content}}</p>
+
+
+      </div>
+    </div>
+  </div>
+  
+
+  <hr>
+
+  {% endblock %}
